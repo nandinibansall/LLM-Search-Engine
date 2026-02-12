@@ -26,4 +26,5 @@ huggingface_hub
 cassio
 datasets
 tiktoken
+ddgs
 PyPDF2
