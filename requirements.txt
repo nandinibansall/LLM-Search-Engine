@@ -28,4 +28,5 @@ datasets
 tiktoken
 duckduckgo-search
 PyPDF2
+ddgs
 
