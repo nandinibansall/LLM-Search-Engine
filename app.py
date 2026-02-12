@@ -3,7 +3,7 @@ from langchain_groq import ChatGroq
 from langchain_community.utilities import WikipediaAPIWrapper,ArxivAPIWrapper
 from langchain_community.tools import ArxivQueryRun,WikipediaQueryRun,DuckDuckGoSearchResults
 from langchain_classic.agents import initialize_agent,AgentType
-from langchain_classic.callbacks import StreamlitCallbackHandler
+from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -50,6 +50,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         response=agent.run(prompt,callbacks=[st_cb])
         st.session_state.messages.append({"role":"assistant","content":response})
         st.write(response)
+
 
 
 
